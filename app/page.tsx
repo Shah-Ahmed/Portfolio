@@ -1,101 +1,93 @@
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen bg-gray-50 font-sans">
+      <header className="flex justify-between items-center p-8">
+        <h1 className="text-2xl font-bold text-black">ma.</h1>
+        <nav className="space-x-6">          
+          <Link href="#" className="text-black hover:underline">
+            About
+          </Link>
+          <Link href="/project" className="text-black hover:underline">
+            Work
+          </Link>
+          <Link href="#" className="text-black hover:underline">
+            Engagement
+          </Link>
+          <Link href="#" className="text-black hover:underline">
+            Contact
+          </Link>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="max-w-6xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 className="text-5xl font-bold mb-6 text-black">
+            Hi, I am Tania Walijan.
+          </h2>
+          <p className="text-xl text-black leading-loose mb-6">
+          As a detail-oriented and organized accounting professional, I bring a passion for numbers and a commitment to accuracy to every project.<br />
+          My expertise includes financial statement preparation, budgeting, forecasting, and financial analysis.<br />
+          I am dedicated to providing exceptional service to my clients, and strive to build long-term relationships.
+          </p>
+          <p className="text-xl text-black leading-loose">
+            Currently I am enrolled in GI-AIWMD by Gorvernor of Sindh.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <div>
+          <img
+            src="/images/portfolioimg.jpg" // Replace with the correct path
+            alt="Profile Visual"
+            width={500}
+            height={200}
+            className="rounded shadow-lg w-full h-auto"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto p-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-xl text-black">Workstation</h3>
+            <p className="text-lg text-black">CopperGAT Cables</p>
+            <p className="text-lg text-black">Accountant</p>
+          </div>
+          <div>
+            <h3 className="text-xl text-black">Skillsets</h3>
+            <p className="text-lg text-black">Accounting and Finance</p>
+            <p className="text-lg text-black">Budgeting</p>
+            <p className="text-lg text-black">Financial Analysis</p>
+          </div>
+          <div>
+            <h3 className="text-xl text-black">Current</h3>
+            <p className="text-lg text-black">
+              Student @ GI-AIWMD by Gorvernor of Sindh, Karachi.
+            </p>
+            <p className="text-lg text-black">Teaching</p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-gray-100 py-8">
+        <div className="max-w-6xl mx-auto px-8">
+          <div className="flex justify-between items-center">
+            <p className="text-lg text-black">
+              I am thrilled to answer to your next project.
+            </p>
+            <a
+              href="mailto:mailkarasu@outlook.com"
+              className="text-blue-600 font-medium hover:underline"
+            >
+              tania.walijan@gmail.com
+            </a>
+          </div>
+          <p className="text-sm text-black mt-4">
+            Tania Walijan — 1996
+          </p>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
